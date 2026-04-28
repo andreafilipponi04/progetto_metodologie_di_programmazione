@@ -6,7 +6,7 @@ dell'area di competenza della stazione, garantendo il rispetto dei vincoli di
 sicurezza e delle risorse disponibili.
 
 > **Progetto per il corso di Metodologie di Programmazione**
-> Studente: Andrea Filipponi — Matricola: 7137945
+> Studente: Andrea Filipponi
 > Anno Accademico: 2024/25 — Eclipse 2025-12
 
 ---
