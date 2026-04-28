@@ -105,25 +105,37 @@ classe che implementa `TrainVisitor`, senza modificare le classi dei treni esist
 ## Struttura del Progetto
 
 src/
-├── station/
-│ └── Station.java # Implementazione di TrafficController
-├── trains/
-│ ├── Train.java # Classe base astratta
-│ ├── PassengerTrain.java # Treno passeggeri (posti)
-│ ├── FreightTrain.java # Treno merci (peso massimo carico)
-│ ├── TrainState.java # Stato astratto + Static Factory Methods
-│ ├── TrafficController.java # Interfaccia del controllore del traffico
-│ ├── IllegalTrainStateTransitionException.java
-│ ├── TrainNotInStationException.java
-│ └── UnauthorizedTrainActionException.java
-└── utils/
-├── TrainObserver.java # Interfaccia Observer
-├── TrainVisitor.java # Interfaccia Visitor
-├── TrainPrinter.java # Astrazione per la stampa
-├── TrainLogger.java # Observer: logging
-├── StaffCheckObserver.java # Observer: verifica personale
-├── CostEstimator.java # Visitor: stima costi
-└── StaffPlanner.java # Visitor: pianificazione personale
+├── main/
+│   └── java/
+│       ├── station/
+│       │   └── Station.java                              # Implementazione di TrafficController
+│       ├── trains/
+│       │   ├── Train.java                                # Classe base astratta
+│       │   ├── PassengerTrain.java                       # Treno passeggeri (posti)
+│       │   ├── FreightTrain.java                         # Treno merci (peso massimo)
+│       │   ├── TrainState.java                           # Stato astratto + Static Factory Methods
+│       │   ├── TrafficController.java                    # Interfaccia del controllore del traffico
+│       │   ├── IllegalTrainStateTransitionException.java # Eccezione di stato
+│       │   ├── TrainNotInStationException.java           # Eccezione di presenza
+│       │   └── UnauthorizedTrainActionException.java     # Eccezione di autorizzazione
+│       └── utils/
+│           ├── TrainObserver.java                        # Interfaccia Observer
+│           ├── TrainVisitor.java                         # Interfaccia Visitor
+│           ├── TrainPrinter.java                         # Astrazione per la stampa
+│           ├── TrainLogger.java                          # Observer: logging
+│           ├── StaffCheckObserver.java                   # Observer: verifica personale
+│           ├── CostEstimator.java                        # Visitor: stima costi
+│           └── StaffPlanner.java                         # Visitor: pianificazione personale
+└── test/
+    └── java/
+        ├── trains/
+        │   ├── MockTrafficController.java                # Mock per simulare la stazione nei test
+        │   ├── TrainStateTest.java                       # Test sulle transizioni di stato
+        │   └── TrainTest.java                            # Test su eccezioni e observer
+        └── utils/
+            ├── CostEstimatorTest.java                    # Test di calcolo dei costi
+            ├── StaffCheckObserverTest.java               # Test sul blocco dei treni per mancanza di staff
+            └── StaffPlannerTest.java                     # Test sul calcolo del personale necessario
 
 ---
 
