@@ -6,7 +6,7 @@ dell'area di competenza della stazione, garantendo il rispetto dei vincoli di
 sicurezza e delle risorse disponibili.
 
 > **Progetto per il corso di Metodologie di Programmazione**
-> Studente: Andrea Filipponi
+> Studente: Andrea Filipponi — Matricola: 7137945
 > Anno Accademico: 2024/25 — Eclipse 2025-12
 
 ---
@@ -104,6 +104,7 @@ classe che implementa `TrainVisitor`, senza modificare le classi dei treni esist
 
 ## Struttura del Progetto
 
+```text
 src/
 ├── main/
 │   └── java/
@@ -136,6 +137,7 @@ src/
             ├── CostEstimatorTest.java                    # Test di calcolo dei costi
             ├── StaffCheckObserverTest.java               # Test sul blocco dei treni per mancanza di staff
             └── StaffPlannerTest.java                     # Test sul calcolo del personale necessario
+```
 
 ---
 
